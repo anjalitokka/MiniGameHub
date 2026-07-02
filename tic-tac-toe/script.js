@@ -73,7 +73,7 @@ const enableBtns = ()=>{
 };
 
 const showWinner = (winner)=>{
-    msg.innerText = `Congratulations ${winner}`;
+    msg.innerText = `🎉 Player ${winner} Wins!`;
     msgContainer.classList.remove("hide");
     disableBtns();
 };
