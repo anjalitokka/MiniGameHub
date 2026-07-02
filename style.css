@@ -176,12 +176,7 @@ button:hover{
 /* Footer */
 
 footer{
-    position:fixed;
-    bottom:20px;
-    width:100%;
-    text-align:center;
-    color:#cccccc;
-    font-size:15px;
+   display: none;
 }
 
 /* Popup */
