@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    color:white;
+    transition:.5s;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h2{
+    font-size:30px;
+    color:white;
+}
+
+.aboutBtn{
+    background:white;
+    color:#0072ff;
+    padding:10px 22px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.aboutBtn:hover{
+    background:#0072ff;
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* Background Circle */
+
+.overlay{
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    top:-180px;
+    left:-180px;
+    filter:blur(70px);
+}
+
+/* Main Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+    z-index:10;
+    animation:fadeIn 1s ease;
+}
+
+/* Heading */
+
+h1{
+    font-size:60px;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(0,198,255,.5);
+}
+
+.subtitle{
+    font-size:20px;
+    color:#dddddd;
+    margin-bottom:35px;
+}
+
+/* Stats */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:70px;
+    margin-bottom:50px;
+}
+
+.stats h3{
+    font-size:34px;
+}
+
+.stats p{
+    color:#d9d9d9;
+}
+
+/* Cards */
+
+.game-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    padding:35px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:all .4s ease;
+    animation:float 3s ease-in-out infinite;
+}
+
+.card:nth-child(2){
+    animation-delay:1s;
+}
+
+.card:hover{
+    animation-play-state:paused;
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.icon{
+    font-size:80px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
+    color:#eeeeee;
+    margin-bottom:30px;
+}
+
+/* Buttons */
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,114,255,.4);
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,114,255,.6);
+}
+
+/* Footer */
+
+footer{
+    position:fixed;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    color:#cccccc;
+    font-size:15px;
+}
+
+/* Popup */
+
+.popup{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+}
+
+.popup-content{
+    width:420px;
+    background:white;
+    color:black;
+    padding:35px;
+    border-radius:20px;
+    position:relative;
+    animation:popup .3s ease;
+}
+
+.popup-content span{
+    position:absolute;
+    right:18px;
+    top:12px;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.popup-content span:hover{
+    color:red;
+}
+
+.popup-content h2{
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    line-height:1.7;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+    }
+
+    nav h2{
+        font-size:24px;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    .subtitle{
+        font-size:17px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .game-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+        max-width:350px;
+    }
+
+    footer{
+        font-size:13px;
+        padding:0 10px;
+    }
+
+}
