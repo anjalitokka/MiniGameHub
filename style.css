@@ -93,20 +93,21 @@ h1{
 /* Stats */
 
 .stats{
-    display:flex;
-    justify-content:center;
-    gap:70px;
-    margin-bottom:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:30px 0 40px;
+}
+
+.stats div{
+    background:rgba(255,255,255,.08);
+    padding:15px;
+    border-radius:15px;
 }
 
 .stats h3{
-    font-size:34px;
+    font-size:28px;
 }
-
-.stats p{
-    color:#d9d9d9;
-}
-
 /* Cards */
 
 .game-container{
