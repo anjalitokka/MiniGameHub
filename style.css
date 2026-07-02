@@ -278,24 +278,36 @@ footer{
 @media(max-width:900px){
 
     nav{
-        padding:20px;
+        padding:15px 20px;
     }
 
     nav h2{
-        font-size:24px;
+        font-size:20px;
+    }
+
+    .aboutBtn{
+        padding:8px 16px;
+        font-size:14px;
+    }
+
+    .container{
+        margin-top:80px;
+        padding-bottom:50px;
     }
 
     h1{
         font-size:42px;
+        line-height:1.2;
     }
 
     .subtitle{
-        font-size:17px;
+        font-size:18px;
+        padding:0 10px;
     }
 
     .stats{
         flex-direction:column;
-        gap:20px;
+        gap:25px;
     }
 
     .game-container{
@@ -304,13 +316,15 @@ footer{
     }
 
     .card{
-        width:90%;
-        max-width:350px;
+        width:95%;
+        max-width:340px;
     }
 
     footer{
-        font-size:13px;
-        padding:0 10px;
+        position:relative;
+        margin-top:40px;
+        padding:20px;
+        text-align:center;
     }
 
 }
